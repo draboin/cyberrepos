@@ -18,3 +18,8 @@ curl https://raw.githubusercontent.com/draboin/cyberrepos/main/blacklist.sh | ba
 curl https://raw.githubusercontent.com/draboin/cyberrepos/main/findsdoor.sh | bash
 
 curl https://raw.githubusercontent.com/draboin/cyberrepos/main/perlfinders.sh | bash
+
+
+
+Ip image:
+tcpdump -i eth0 -A "tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)" | grep -a -o -E "GET .* HTTP/1\.1"
