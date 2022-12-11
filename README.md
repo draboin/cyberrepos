@@ -23,3 +23,7 @@ curl https://raw.githubusercontent.com/draboin/cyberrepos/main/perlfinders.sh | 
 
 Ip image:
 tcpdump -i eth0 -A "tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)" | grep -a -o -E "GET .* HTTP/1\.1"
+
+future referencce:
+
+https://gist.github.com/bobpaw/a0b6828a5cfa31cfe9007b711a36082f#file-checklist-sh
